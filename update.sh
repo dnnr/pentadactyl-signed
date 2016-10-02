@@ -84,7 +84,7 @@ rm install.rdf
 # Sign xpi with jpm
 # Python wrapper makes sure the signed xpi file ends up at a known location
 signed_xpi="pentadactyl-signed-$version.xpi"
-python "${DIR}/amo_xpi_sign.py" -k "$amo_key" -s "$amo_secret" -x pentadactyl.xpi -o "$signed_xpi"
+python3 "${DIR}/amo_xpi_sign.py" -k "$amo_key" -s "$amo_secret" -x pentadactyl.xpi -o "$signed_xpi"
 
 # Update update.rdf file
 sed -e 's#<em:updateLink>.*</em:updateLink>#<em:updateLink>https://github.com/'"$github_user"'/'"$github_repo"'/releases/download/'"$version"'/'"$signed_xpi"'</em:updateLink>#' \
