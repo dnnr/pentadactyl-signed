@@ -99,6 +99,6 @@ git tag "$version"
 git push --tags
 
 # Upload xpi to GitHub as new release
-python "${DIR}/github_release.py" --token "$github_token" --user "$github_user" \
-	--repo "$github_repo" --version "$version" --file "$signed_xpi" \
-	--content-type application/x-xpinstall
+#python "${DIR}/github_release.py" --token "$github_token" --user "$github_user" \
+#	--repo "$github_repo" --version "$version" --file "$signed_xpi" \
+#	--content-type application/x-xpinstall
