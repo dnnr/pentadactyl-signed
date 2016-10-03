@@ -93,10 +93,10 @@ sed -e 's#<em:updateLink>.*</em:updateLink>#<em:updateLink>https://github.com/'"
 	-i "${DIR}/update.rdf"
 
 # Push new update.rdf to GitHub
-git commit -a -m "$version"
-git push
-git tag "$version"
-git push --tags
+#git commit -a -m "$version"
+#git push
+#git tag "$version"
+#git push --tags
 
 # Upload xpi to GitHub as new release
 #python "${DIR}/github_release.py" --token "$github_token" --user "$github_user" \
