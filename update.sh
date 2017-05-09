@@ -74,7 +74,9 @@ mv pentadactyl*.xpi pentadactyl.xpi
 
 # Set version string in install.rdf
 unzip pentadactyl.xpi install.rdf
+echo "Old install.rdf version: $(grep em:version install.rdf)"
 sed -i -e 's/em:version=".*"/em:version="'"$version"'"/' install.rdf
+echo "New install.rdf version: $(grep em:version install.rdf)"
 zip -u pentadactyl.xpi install.rdf
 rm install.rdf
 
