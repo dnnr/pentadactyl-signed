@@ -57,6 +57,7 @@ fi
 
 # Get max Firefox version
 max_fx_version="$(python "${DIR}"/max_firefox_version.py)"
+echo "Bumping max Firefox version to $max_fx_version"
 
 # Modify install.rdf to change id, update URL, and max Firefox version
 sed -e 's/em:id="pentadactyl@dactyl.googlecode.com"/em:id="'"$addon_id"'"/' \
