@@ -50,7 +50,7 @@ hg pull
 hg update
 
 # Get version number and exit if no changes
-version="$(($(hg log -r . --template '{rev}')+1001))"
+version="$(($(hg log -r . --template '{rev}')+1002))"
 if [ "$last_version" = "$version" ]; then
 	exit 0
 fi
